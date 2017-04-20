@@ -1,0 +1,10 @@
+getrax:
+    image: mysite 
+    ports:
+        - 82:80
+        - 445:443
+    volumes:
+        - ~/ee/portal-getrax:/var/www/site
+        - ~/ee/logs:/var/log/apache2
+    external_links:
+        - mysql_mysql_1:getraxDb
