@@ -1,0 +1,16 @@
+nexus:
+    image: imix/nexus
+    environment:
+        - JKS_PASSWORD Imix2016
+        - NEXUS_DOMAIN getrax.cloudapp.net
+        - NEXUS_IP_ADDRESS 13.84.159.148
+    ports:
+        - 8082:8081
+        - 8443:8443
+        - 18443:18443
+        - 18444:18444
+    expose:
+        - 8081
+        - 8443
+        - 18443
+        - 18444
