@@ -1,0 +1,9 @@
+cas2:
+    image: imix/tomcat
+    ports:
+        - 8081:8080
+    external_links:
+        - mysql_mysql_1:ticketDB
+    volumes: 
+        - ~/shared/tomcat/logs2:/usr/local/tomcat/logs
+        - ~/shared/cas/logs2:/var/log/cas
