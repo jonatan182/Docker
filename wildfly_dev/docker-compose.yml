@@ -1,0 +1,10 @@
+publicservices:
+    image: wildfly
+    ports:
+        - 8080:8080
+        - 9990:9990
+    volumes:
+        - ~/shared/dev/publicservices1/deployments:/opt/wildfly-9.0.1.Final/standalone/deployments
+        - ~/shared/dev/publicservices1/configurations:/opt/wildfly-9.0.1.Final/modules/com/imix
+        - ~/shared/dev/publicservices1/logs:/var/log/wildfly
+        - ~/shared/dev/publicservices1/log_server:/opt/wildfly-9.0.1.Final/standalone/log

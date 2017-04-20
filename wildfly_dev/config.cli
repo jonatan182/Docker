@@ -1,0 +1,66 @@
+batch
+
+/subsystem=datasources/jdbc-driver=mysql:add(driver-name=mysql,driver-module-name=com.sql.mysql)
+
+data-source add --name=itservices \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/itservices \
+			--connection-url=jdbc:mysql://10.44.58.112:3313/ITSERVICES?autoReconnect=true \
+			--user-name=componentes \
+			--password=componentes \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker \
+			--validate-on-match=true \
+			--background-validation=true \
+			--background-validation-millis=200000 
+			
+
+data-source add --name=session \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/session \
+			--connection-url=jdbc:mysql://10.44.58.112:3310/movilred?autoReconnect=true \
+			--user-name=componentes \
+			--password=componentes \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker \
+			--validate-on-match=true \
+			--background-validation=true \
+			--background-validation-millis=200000 
+			
+data-source add --name=zeus \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/zeus \
+			--connection-url=jdbc:mysql://10.44.58.112:3311/ZEUS?autoReconnect=true \
+			--user-name=componentes \
+			--password=componentes \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker \
+			--validate-on-match=true \
+			--background-validation=true \
+			--background-validation-millis=200000 
+
+data-source add --name=seguridad \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/seguridad \
+			--connection-url=jdbc:mysql://10.44.58.112:3314/SEGURIDAD?autoReconnect=true \
+			--user-name=componentes \
+			--password=componentes \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mysql.MySQLValidConnectionChecker \
+			--validate-on-match=true \
+			--background-validation=true \
+			--background-validation-millis=200000 
+
+run-batch
