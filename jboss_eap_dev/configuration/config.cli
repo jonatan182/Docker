@@ -1,0 +1,50 @@
+batch
+
+/subsystem=datasources/jdbc-driver=sqlserver:add(driver-name=sqlserver,driver-module-name=com.microsoft.sqlserver)
+
+data-source add --name=credibanco_parameters \
+			--driver-name=sqlserver \
+			--jndi-name=java:jboss/datasources/credibanco_parameters \
+			--connection-url=jdbc:sqlserver://10.44.58.135:1433;DatabaseName=PARAMETERS;autoReconnect=true \
+			--user-name=componentes \
+			--password=**s0l1dd4** \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=60000		
+			
+data-source add --name=credibanco_afiliaciones \
+			--driver-name=sqlserver \
+			--jndi-name=java:jboss/datasources/credibanco_afiliaciones \
+			--connection-url=jdbc:sqlserver://10.44.58.135:1433;DatabaseName=AFILIACIONES;autoReconnect=true \
+			--user-name=componentes \
+			--password=**s0l1dd4** \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=60000
+
+data-source add --name=seguridad \
+			--driver-name=sqlserver \
+			--jndi-name=java:jboss/datasources/credibanco_afiliaciones \
+			--connection-url=jdbc:sqlserver://10.44.58.135:1433;DatabaseName=SECURITY;autoReconnect=true \
+			--user-name=componentes \
+			--password=**s0l1dd4** \
+			--use-ccm=true \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--valid-connection-checker-class-name=org.jboss.jca.adapters.jdbc.extensions.mssql.MSSQLValidConnectionChecker \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=60000 			
+			
+run-batch

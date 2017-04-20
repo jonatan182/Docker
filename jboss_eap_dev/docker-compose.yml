@@ -1,0 +1,15 @@
+dev:
+    image: zheiro/jdk8-jboss-eap7
+    ports:
+        - 8084:8080
+        - 9994:9990
+    volumes: 
+        - ~/git/jboss_eap_dev/base:/opt/jboss/jboss-eap-7.0/modules/system/layers/base/com/microsoft
+        - ~/git/jboss_eap_dev/configuration:/home
+        - ~/shared/dev/jbosseap7_1/configurations:/opt/jboss/jboss-eap-7.0/modules/com/credibanco
+        - ~/shared/dev/jbosseap7_1/logs:/var/log/jbosseap7
+        - ~/shared/dev/jbosseap7_1/deployments:/opt/jboss/jboss-eap-7.0/standalone/deployments
+        - ~/shared/dev/jbosseap7_1/log_server:/opt/jboss/jboss-eap-7.0/standalone/log
+    command: > 
+     /bin/bash -c " sh /home/execute.sh;  /opt/jboss/jboss-eap-7.0/bin/add-user.sh admin Imix2017.  ; /opt/jboss/jboss-eap-7.0/bin/standalone.sh -b 0.0.0.0 -bmanagement 0.0.0.0 "
+     
