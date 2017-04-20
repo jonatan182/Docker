@@ -1,0 +1,18 @@
+mysqlclient:
+    image: imix/mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=rootpassword
+    links:
+        - mysql
+    volumes:
+        - ~/shared/mysql/transaccional/scripts:/home
+    command: sh -c 'sh /restore.sh'
+mysql:
+    image: imix/mysql
+    environment:
+        - MYSQL_ROOT_PASSWORD=rootpassword
+        - TZ=America/Bogota
+    ports:
+        - 3306:3306
+    expose:
+        - 3306
