@@ -1,0 +1,9 @@
+publicservices:
+    image: imix/publicservices
+    ports:
+        - 8080:8080
+        - 9990:9990
+    volumes: 
+        - ~/shared/deployments/publicservices:/opt/wildfly/standalone/deployments
+        - ~/shared/configurations/publicservices:/opt/wildfly/modules/system/layers/base/com/imix/publicservices/settings/main
+        - ~/shared/logs/publicservices:/opt/wildfly/standalone/log

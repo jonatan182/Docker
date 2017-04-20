@@ -1,0 +1,64 @@
+batch
+
+data-source add --name=itservices \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/itservices \
+			--connection-url=jdbc:mysql://mysql:3306/ITSERVICES?autoReconnect=true \
+			--user-name=root \
+			--password=rootpassword \
+			--use-ccm=true \
+			--max-pool-size=25 \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=200000 
+			
+
+data-source add --name=session \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/session \
+			--connection-url=jdbc:mysql://mysql:3306/movilred?autoReconnect=true \
+			--user-name=root \
+			--password=rootpassword \
+			--use-ccm=true \
+			--max-pool-size=25 \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=200000 
+			
+data-source add --name=zeus \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/zeus \
+			--connection-url=jdbc:mysql://mysql:3306/ZEUS?autoReconnect=true \
+			--user-name=root \
+			--password=rootpassword \
+			--use-ccm=true \
+			--max-pool-size=25 \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=200000 
+
+data-source add --name=giros \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/datasources/giros \
+			--connection-url=jdbc:mysql://mysql:3306/GIROS?autoReconnect=true \
+			--user-name=root \
+			--password=rootpassword \
+			--use-ccm=true \
+			--max-pool-size=25 \
+			--blocking-timeout-wait-millis=5000 \
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=200000 
+
+run-batch

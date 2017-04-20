@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Channels.xml
+    Created on : 10 de diciembre de 2009, 03:39 PM
+    Author     : jtoledo
+    Description:
+        Purpose of the document follows.
+-->
+<Channels>
+    <channels>
+        <id>3</id>
+        <name>AEL</name>
+        <jdniNameDayli>java:jboss/exported/ALIANZAS</jdniNameDayli>
+        <jdniNameHistory>ALIANZASREP</jdniNameHistory>
+    </channels>
+    <channels>
+        <id>5</id>
+        <name>GIROS</name>
+        <jdniNameDayli>java:jboss/exported/GIROS</jdniNameDayli>
+        <jdniNameHistory>GIROSREP</jdniNameHistory>
+    </channels>
+</Channels>
+

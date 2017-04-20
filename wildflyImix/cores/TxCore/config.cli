@@ -1,0 +1,68 @@
+batch
+
+data-source add --name=TAT_MYSQL \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/exported/TAT_MYSQL \
+			--connection-url=jdbc:mysql://10.44.55.147:3306/ZEUS?autoReconnect=true \
+			--user-name=componentes \
+			--password=componentes \
+			--use-ccm=true \						
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=10000 
+			
+data-source add --name=INT_SER \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/exported/INT_SER \
+			--connection-url=jdbc:mysql://10.44.55.147:3319/ITSERVICES?autoReconnect=true \
+			--user-name=uwebservice \
+			--password=pwd2013$ \
+			--use-ccm=true \			
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=10000 
+
+data-source add --name=ALIANZAS \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/exported/ALIANZAS \
+			--connection-url=jdbc:mysql://10.44.55.147:3316/ALIANZAS?autoReconnect=true \
+			--user-name=root \
+			--password=root2014 \
+			--use-ccm=true \			
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=10000 
+			
+data-source add --name=MOVILRED \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/exported/MOVILRED \
+			--connection-url=jdbc:mysql://10.44.55.147:3317/movilred?autoReconnect=true \
+			--user-name=root \
+			--password=admin123 \
+			--use-ccm=true \			
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=10000 
+			
+data-source add --name=GIROS \
+			--driver-name=mysql \
+			--jndi-name=java:jboss/exported/GIROS \
+			--connection-url=jdbc:mysql://10.44.55.147:3312/GIROS?noAccessToProcedureBodies=true&autoReconnect=true \
+			--user-name=uwebservice \
+			--password=pwd2013$ \
+			--use-ccm=true \			
+			--enabled=true \
+			--check-valid-connection-sql="select 1 from dual" \
+			--validate-on-match=false \
+			--background-validation=true \
+			--background-validation-millis=10000 
+			
+run-batch

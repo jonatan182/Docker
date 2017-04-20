@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : Channels.xml
+    Created on : 10 de diciembre de 2009, 03:39 PM
+    Author     : jtoledo
+    Description:
+        Purpose of the document follows.
+-->
+<Channels>
+    <channels>
+        <id>1</id>
+        <name>POS</name>
+        <jdniNameDayli>jdbc/TAT_MYSQL</jdniNameDayli>
+        <jdniNameHistory>HISTPER</jdniNameHistory>
+    </channels>
+    <channels>
+        <id>2</id>
+        <name>GS</name>
+        <jdniNameDayli>jdbc/TAT_MYSQL</jdniNameDayli>
+        <jdniNameHistory>HISTPER</jdniNameHistory>
+    </channels>
+    <channels>
+        <id>7</id>
+        <name>TATCARVAJAL</name>
+        <jdniNameDayli>jdbc/TAT_MYSQL</jdniNameDayli>
+        <jdniNameHistory>HISTPER</jdniNameHistory>
+    </channels>
+    <channels>
+        <id>6</id>
+        <name>PINES</name>
+        <jdniNameDayli>jdbc/TAT_MYSQL</jdniNameDayli>
+        <jdniNameHistory>HISTPER</jdniNameHistory>
+    </channels>
+    <channels>
+        <id>8</id>
+        <name>TATMYSQL</name>
+        <jdniNameDayli>jdbc/TAT_MYSQL</jdniNameDayli>
+        <jdniNameHistory>HISTPER</jdniNameHistory>
+    </channels>
+</Channels>
+

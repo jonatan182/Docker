@@ -1,0 +1,30 @@
+publicservices:
+    build: public
+    links:
+        - admincore
+        - txcore
+    ports:
+        - 8080:8080
+        - 9990:9990
+    volumes: 
+        - ~/shared/deployments/publicservices:/opt/wildfly/standalone/deployments
+        - ~/shared/configurations/publicservices:/opt/wildfly/modules/system/layers/base/com/imix/publicservices/settings/main
+        - ~/shared/logs/publicservices:/opt/wildfly/standalone/log
+    log_driver: gelf
+    log_opt:
+        gelf-address: udp://172.17.0.2:5044
+        gelf-tag: publicservices
+admincore:
+    build: cores/admincore
+    links:
+        - txcore
+    volumes: 
+        - ~/shared/deployments/admincore:/opt/wildfly/standalone/deployments
+        - ~/shared/configurations/admincore:/opt/wildfly/modules/system/layers/base/com/imix/admincore/settings/main
+        - ~/shared/logs/admincore:/opt/wildfly/standalone/log
+txcore:
+    build: cores/txcore
+    volumes: 
+        - ~/shared/deployments/txcore:/opt/wildfly/standalone/deployments
+        - ~/shared/configurations/txcore:/opt/wildfly/modules/system/layers/base/com/imix/txcore/settings/main
+        - ~/shared/logs/txcore:/opt/wildfly/standalone/log

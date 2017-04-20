@@ -1,0 +1,9 @@
+@project WSTransactionIntMaxDv_1_0_1
+@description Web Service Transaccional
+   ------------------------
+
+@version 1.0.1
+@date 29/10/2013 
+@author nramirez@koghi.com 
+@sprint 27 
+Se agregó método para pago de subsidios, que no depende del canal de conexión al switch de giros, para ello se agregó un servicio web 
