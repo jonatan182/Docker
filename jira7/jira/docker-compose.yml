@@ -1,0 +1,9 @@
+jira:
+    image: imix/jira7
+    ports:
+        - 8080:8080
+        - 8443:443
+    external_links:
+        - mysqljira_mysql_1:jiradb
+    volumes:
+        - /home/jira/var/atlassian/jira/data:/var/atlassian/jira/data
