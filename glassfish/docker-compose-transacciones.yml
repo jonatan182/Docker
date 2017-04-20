@@ -1,0 +1,119 @@
+adminwrapper:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    external_links:
+        - mysql_mysql_1:mysql
+    links:
+        - admincore
+    ports:
+        - 8081:8080
+        - 4841:4848
+    environment:
+        - CONTEXT_ROOT=AdminWrapper
+    volumes: 
+        - ~/shared/wrappers/adminwrapper/logs:/var/log/glassfish
+        - ~/shared/wrappers/adminwrapper/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/wrappers/adminwrapper/configuration:/opt/glassfish/domains/domain1/lib/classes/AdminWrapper
+admingiros:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    external_links:
+        - mysql_mysql_1:mysql
+    links:
+        - admincore
+        - txcore
+    ports:
+        - 8082:8080
+        - 4842:4848
+    environment:
+        - CONTEXT_ROOT=AdminWrapper
+    volumes: 
+        - ~/shared/wrappers/admingiros/logs:/var/log/glassfish
+        - ~/shared/wrappers/admingiros/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/wrappers/admingiros/configuration:/opt/glassfish/domains/domain1/lib/classes/AdminWrapper
+txwrapper:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    external_links:
+        - mysql_mysql_1:mysql
+    links:
+        - admincore
+        - txcore
+    ports:
+        - 8083:8080
+        - 4843:4848
+    environment:
+        - CONTEXT_ROOT=TransactionalWrapper
+    volumes: 
+        - ~/shared/wrappers/txwrapper/logs:/var/log/glassfish
+        - ~/shared/wrappers/txwrapper/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/wrappers/txwrapper/configuration:/opt/glassfish/domains/domain1/lib/classes/TransactionalWrapper
+reportswrapper:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    links:
+        - reportscore
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 8084:8080
+        - 4844:4848
+    environment:
+        - CONTEXT_ROOT=RepoWrapper
+    volumes: 
+        - ~/shared/wrappers/repowrapper/logs:/var/log/glassfish
+        - ~/shared/wrappers/repowrapper/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/wrappers/repowrapper/configuration:/opt/glassfish/domains/domain1/lib/classes/RepoWrapper
+admincore:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 8085:8080
+        - 4845:4848
+    environment:
+        - CONTEXT_ROOT=AdministrationCore
+    volumes: 
+        - ~/shared/cores/admincore/logs:/var/log/glassfish
+        - ~/shared/cores/admincore/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/cores/admincore/configuration:/opt/glassfish/domains/domain1/lib/classes/AdministrationCore
+txcore:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    external_links:
+        - mysql_mysql_1:mysql
+        - switch_swrecargas_1:swrecargas
+        - switch_swgiros_1:swgiros
+        - switch_swrecaudo_1:swrecaudo
+        - switch_swsubsidio_1:swsubsidio
+    ports:
+        - 8086:8080
+        - 4846:4848
+    environment:
+        - CONTEXT_ROOT=TransactionalCore
+    volumes: 
+        - ~/shared/cores/txcore/logs:/var/log/glassfish
+        - ~/shared/cores/txcore/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/cores/txcore/configuration:/opt/glassfish/domains/domain1/lib/classes/TransactionalCore
+reportscore:
+    image: imix/glassfish
+    environment:
+        - "TZ=America/Bogota"
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 8087:8080
+        - 4847:4848
+    environment:
+        - CONTEXT_ROOT=ReportsCore
+    volumes: 
+        - ~/shared/cores/reportscore/logs:/var/log/glassfish
+        - ~/shared/cores/reportscore/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/cores/reportscore/configuration:/opt/glassfish/domains/domain1/lib/classes/ReportsCore

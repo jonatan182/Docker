@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: Woodstock
+Created-By: 1.5.0_16 (Sun Microsystems Inc.)
+Implementation-Title: Woodstock 4.0.2.2
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 4.0
+Implementation-Vendor-Id: com.sun
+Implementation-Version: 4.0.2.2
+Implementation-Vendor: Sun Microsystems, Inc.
+

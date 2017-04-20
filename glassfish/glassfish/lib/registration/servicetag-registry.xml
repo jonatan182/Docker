@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<registry>
+    <service_tag>
+        <instance_urn>urn:st:021212fc-b258-4416-bef8-d06929a4f792</instance_urn>
+        <product_name>Sun Java System Application Server</product_name>
+        <product_version>9.1.1</product_version>
+        <product_urn>urn:uuid:f49ff605-60a0-11dc-9b8e-080020a9ed93</product_urn>
+        <product_parent_urn>urn:uuid:a573278d-43d6-11d9-9607-080020a9ed93</product_parent_urn>
+        <product_parent>Sun Java System Application Server</product_parent>
+        <product_defined_inst_id>os.name=Linux;os.version=4.1.13-boot2docker;java.version=1.6.0_45;glassfish.home=/opt/glassfish;java.home=/usr/java/jdk1.6.0_45/jre</product_defined_inst_id>
+        <product_vendor>Sun Microsystems Inc.</product_vendor>
+        <platform_arch>amd64</platform_arch>
+        <container>global</container>
+        <source>Glassfish V2.1.1</source>
+        <status>NOT_TRANSFERRED</status>
+        <registration_status>NOT_REGISTERED</registration_status>
+    </service_tag>
+    <registration_reminder>ASK_FOR_REGISTRATION</registration_reminder>
+</registry>

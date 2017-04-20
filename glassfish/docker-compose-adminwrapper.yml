@@ -1,0 +1,13 @@
+adminwrapper:
+    image: imix/glassfish
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 8081:8080
+        - 4841:4848
+    environment:
+        - CONTEXT_ROOT=AdminWrapper
+    volumes: 
+        - ~/shared/wrappers/adminwrapper/logs:/var/log/glassfish
+        - ~/shared/wrappers/adminwrapper/deployments:/opt/glassfish/domains/domain1/autodeploy
+        - ~/shared/wrappers/adminwrapper/configuration:/opt/glassfish/domains/domain1/lib/classes/AdminWrapper

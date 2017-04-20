@@ -1,0 +1,206 @@
+# 1453819958570 Do not modify this line
+[26/Jan/2016:14:52:38 UTC] [B1002]: An existing property file for imqbroker was not found, no stored properties will be loaded
+[26/Jan/2016:14:52:38 UTC] 
+================================================================================
+Open Message Queue 4.4
+Sun Microsystems, Inc.
+Version:  4.4  (Build 16-a)
+Compile:  Thu Aug 27 07:43:07 PDT 2009
+
+Copyright (c) 2009 Sun Microsystems, Inc.  All rights reserved.  Use is
+subject to license terms.
+================================================================================
+Java Runtime: 1.6.0_45 Sun Microsystems Inc. /usr/java/jdk1.6.0_45/jre
+[26/Jan/2016:14:52:38 UTC]    IMQ_HOME=/opt/glassfish/imq
+[26/Jan/2016:14:52:38 UTC] IMQ_VARHOME=/opt/glassfish/domains/domain1/imq
+[26/Jan/2016:14:52:38 UTC] Linux 4.1.13-boot2docker amd64 78c1805eec58 (1 cpu) root
+[26/Jan/2016:14:52:38 UTC] Java Heap Size: max=506816k, current=31104k
+[26/Jan/2016:14:52:38 UTC] Arguments: -port 7676 -name imqbroker -imqhome /opt/glassfish/imq -varhome /opt/glassfish/domains/domain1/imq -libhome /opt/glassfish/imq/lib -useRmiRegistry -rmiRegistryPort 8686 -save -silent
+[26/Jan/2016:14:52:38 UTC] Embedded Broker 
+[26/Jan/2016:14:52:38 UTC] [B1004]: Starting the portmapper service using tcp [ 7676, 50, * ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:52:38 UTC] [B1060]: Loading persistent data...
+[26/Jan/2016:14:52:38 UTC] Using built-in file-based persistent store: /opt/glassfish/domains/domain1/imq/instances/imqbroker/
+[26/Jan/2016:14:52:39 UTC] [B1041]: Cluster initialization successful.
+[26/Jan/2016:14:52:39 UTC] [B1004]: Starting the cluster_discovery service using tcp [ 0, 100 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:52:39 UTC] [B1136]: Processing stored transactions
+[26/Jan/2016:14:52:39 UTC] [B1284]: 0 cluster transactions remain in PREPARED state, 0 in COMMITTED state waiting for remote broker completion
+[26/Jan/2016:14:52:39 UTC] Of 0 remote transactions, 0 in PREPARED state, 0 in COMMITTED state
+[26/Jan/2016:14:52:39 UTC] [B1013]: Auto Creation of Queues is enabled
+[26/Jan/2016:14:52:39 UTC] [B1144]: Creating Dead Message Queue
+[26/Jan/2016:14:52:39 UTC] [B1158]: Administrator has created destination mq.sys.dmq [Queue]
+[26/Jan/2016:14:52:39 UTC] [B1239]: Using platform MBean server
+[26/Jan/2016:14:52:39 UTC] JESMF classes not present - JESMF support will not be enabled.
+[26/Jan/2016:14:52:39 UTC] JMX Connector Server jmxrmi started successfully with url service:jmx:rmi://78c1805eec58/jndi/rmi://78c1805eec58:8686/78c1805eec58/7676/jmxrmi
+[26/Jan/2016:14:52:39 UTC] [B1004]: Starting the admin service using tcp(host = *, port=0, mode=dedicated) with min threads 4 and max threads of 10 
+[26/Jan/2016:14:52:39 UTC] [B1227]: Using file user repository for admin service connection authentication
+[26/Jan/2016:14:52:39 UTC] [B1004]: Starting the jms service using tcp(host = *, port=0, mode=dedicated) with min threads 10 and max threads of 1000 
+[26/Jan/2016:14:52:39 UTC] [B1227]: Using file user repository for jms service connection authentication
+[26/Jan/2016:14:52:39 UTC] [B1004]: Starting the mqdirect2 service using in-process connections with min threads 0 and max threads of 0 
+[26/Jan/2016:14:52:39 UTC] [B1227]: Using file user repository for mqdirect2 service connection authentication
+[26/Jan/2016:14:52:39 UTC] [B1004]: Starting the jmsdirect service using  with min threads 0 and max threads of 0 
+[26/Jan/2016:14:52:39 UTC] [B1227]: Using file user repository for jmsdirect service connection authentication
+[26/Jan/2016:14:52:40 UTC] [B1004]: Starting the cluster service using tcp [ 0.0.0.0/0.0.0.0:56278 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:52:40 UTC] [B1228]: Cluster ping interval is 60 seconds
+[26/Jan/2016:14:52:40 UTC] [B1039]: Broker "imqbroker@78c1805eec58:7676" ready.
+[26/Jan/2016:14:55:47 UTC] [B1047]: Shutting down broker...
+[26/Jan/2016:14:55:47 UTC] [B1077]: Broadcast good-bye to all connections ...
+[26/Jan/2016:14:55:47 UTC] [B1078]: Flushing good-bye messages ...
+[26/Jan/2016:14:55:47 UTC] [B1007]: Stopping Service admin with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:14:55:47 UTC] [B1007]: Stopping Service jmsdirect with protocol 
+[26/Jan/2016:14:55:47 UTC] [B1007]: Stopping Service mqdirect2 with protocol none
+[26/Jan/2016:14:55:47 UTC] [B1007]: Stopping Service jms with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:14:55:47 UTC] JMX Connector Server jmxrmi stopped successfully
+[26/Jan/2016:14:55:50 UTC] [B1048]: Shutdown of broker complete.
+[26/Jan/2016:14:56:34 UTC] 
+================================================================================
+Open Message Queue 4.4
+Sun Microsystems, Inc.
+Version:  4.4  (Build 16-a)
+Compile:  Thu Aug 27 07:43:07 PDT 2009
+
+Copyright (c) 2009 Sun Microsystems, Inc.  All rights reserved.  Use is
+subject to license terms.
+================================================================================
+Java Runtime: 1.6.0_45 Sun Microsystems Inc. /usr/java/jdk1.6.0_45/jre
+[26/Jan/2016:14:56:35 UTC]    IMQ_HOME=/opt/glassfish/imq
+[26/Jan/2016:14:56:35 UTC] IMQ_VARHOME=/opt/glassfish/domains/domain1/imq
+[26/Jan/2016:14:56:35 UTC] Linux 4.1.13-boot2docker amd64 78c1805eec58 (1 cpu) root
+[26/Jan/2016:14:56:35 UTC] Java Heap Size: max=506816k, current=31760k
+[26/Jan/2016:14:56:35 UTC] Arguments: -port 7676 -name imqbroker -imqhome /opt/glassfish/imq -varhome /opt/glassfish/domains/domain1/imq -libhome /opt/glassfish/imq/lib -useRmiRegistry -rmiRegistryPort 8686 -save -silent
+[26/Jan/2016:14:56:35 UTC] Embedded Broker 
+[26/Jan/2016:14:56:35 UTC] [B1004]: Starting the portmapper service using tcp [ 7676, 50, * ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:56:35 UTC] [B1060]: Loading persistent data...
+[26/Jan/2016:14:56:35 UTC] Using built-in file-based persistent store: /opt/glassfish/domains/domain1/imq/instances/imqbroker/
+[26/Jan/2016:14:56:35 UTC] [B1041]: Cluster initialization successful.
+[26/Jan/2016:14:56:35 UTC] [B1004]: Starting the cluster_discovery service using tcp [ 0, 100 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:56:35 UTC] [B1136]: Processing stored transactions
+[26/Jan/2016:14:56:35 UTC] [B1284]: 0 cluster transactions remain in PREPARED state, 0 in COMMITTED state waiting for remote broker completion
+[26/Jan/2016:14:56:35 UTC] Of 0 remote transactions, 0 in PREPARED state, 0 in COMMITTED state
+[26/Jan/2016:14:56:35 UTC] [B1013]: Auto Creation of Queues is enabled
+[26/Jan/2016:14:56:35 UTC] [B1151]: Loading destination mq.sys.dmq [Queue] with 0 messages
+[26/Jan/2016:14:56:35 UTC] [B1152]: Loading of destination mq.sys.dmq [Queue] complete
+[26/Jan/2016:14:56:35 UTC] [B1239]: Using platform MBean server
+[26/Jan/2016:14:56:35 UTC] JESMF classes not present - JESMF support will not be enabled.
+[26/Jan/2016:14:56:35 UTC] JMX Connector Server jmxrmi started successfully with url service:jmx:rmi://78c1805eec58/jndi/rmi://78c1805eec58:8686/78c1805eec58/7676/jmxrmi
+[26/Jan/2016:14:56:36 UTC] [B1004]: Starting the admin service using tcp(host = *, port=0, mode=dedicated) with min threads 4 and max threads of 10 
+[26/Jan/2016:14:56:36 UTC] [B1227]: Using file user repository for admin service connection authentication
+[26/Jan/2016:14:56:36 UTC] [B1004]: Starting the jms service using tcp(host = *, port=0, mode=dedicated) with min threads 10 and max threads of 1000 
+[26/Jan/2016:14:56:36 UTC] [B1227]: Using file user repository for jms service connection authentication
+[26/Jan/2016:14:56:36 UTC] [B1004]: Starting the mqdirect2 service using in-process connections with min threads 0 and max threads of 0 
+[26/Jan/2016:14:56:36 UTC] [B1227]: Using file user repository for mqdirect2 service connection authentication
+[26/Jan/2016:14:56:36 UTC] [B1004]: Starting the jmsdirect service using  with min threads 0 and max threads of 0 
+[26/Jan/2016:14:56:36 UTC] [B1227]: Using file user repository for jmsdirect service connection authentication
+[26/Jan/2016:14:56:36 UTC] [B1004]: Starting the cluster service using tcp [ 0.0.0.0/0.0.0.0:54126 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:56:36 UTC] [B1228]: Cluster ping interval is 60 seconds
+[26/Jan/2016:14:56:36 UTC] [B1039]: Broker "imqbroker@78c1805eec58:7676" ready.
+[26/Jan/2016:14:57:07 UTC] [B1047]: Shutting down broker...
+[26/Jan/2016:14:57:07 UTC] [B1077]: Broadcast good-bye to all connections ...
+[26/Jan/2016:14:57:07 UTC] [B1078]: Flushing good-bye messages ...
+[26/Jan/2016:14:57:07 UTC] [B1007]: Stopping Service admin with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:14:57:07 UTC] [B1007]: Stopping Service jmsdirect with protocol 
+[26/Jan/2016:14:57:07 UTC] [B1007]: Stopping Service mqdirect2 with protocol none
+[26/Jan/2016:14:57:07 UTC] [B1007]: Stopping Service jms with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:14:57:07 UTC] JMX Connector Server jmxrmi stopped successfully
+[26/Jan/2016:14:57:10 UTC] [B1048]: Shutdown of broker complete.
+[26/Jan/2016:14:58:47 UTC] 
+================================================================================
+Open Message Queue 4.4
+Sun Microsystems, Inc.
+Version:  4.4  (Build 16-a)
+Compile:  Thu Aug 27 07:43:07 PDT 2009
+
+Copyright (c) 2009 Sun Microsystems, Inc.  All rights reserved.  Use is
+subject to license terms.
+================================================================================
+Java Runtime: 1.6.0_45 Sun Microsystems Inc. /usr/java/jdk1.6.0_45/jre
+[26/Jan/2016:14:58:47 UTC]    IMQ_HOME=/opt/glassfish/imq
+[26/Jan/2016:14:58:47 UTC] IMQ_VARHOME=/opt/glassfish/domains/domain1/imq
+[26/Jan/2016:14:58:47 UTC] Linux 4.1.13-boot2docker amd64 78c1805eec58 (1 cpu) root
+[26/Jan/2016:14:58:47 UTC] Java Heap Size: max=506816k, current=31772k
+[26/Jan/2016:14:58:47 UTC] Arguments: -port 7676 -name imqbroker -imqhome /opt/glassfish/imq -varhome /opt/glassfish/domains/domain1/imq -libhome /opt/glassfish/imq/lib -useRmiRegistry -rmiRegistryPort 8686 -save -silent
+[26/Jan/2016:14:58:47 UTC] Embedded Broker 
+[26/Jan/2016:14:58:47 UTC] [B1004]: Starting the portmapper service using tcp [ 7676, 50, * ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:58:47 UTC] [B1060]: Loading persistent data...
+[26/Jan/2016:14:58:47 UTC] Using built-in file-based persistent store: /opt/glassfish/domains/domain1/imq/instances/imqbroker/
+[26/Jan/2016:14:58:48 UTC] [B1041]: Cluster initialization successful.
+[26/Jan/2016:14:58:48 UTC] [B1136]: Processing stored transactions
+[26/Jan/2016:14:58:48 UTC] [B1284]: 0 cluster transactions remain in PREPARED state, 0 in COMMITTED state waiting for remote broker completion
+[26/Jan/2016:14:58:48 UTC] Of 0 remote transactions, 0 in PREPARED state, 0 in COMMITTED state
+[26/Jan/2016:14:58:48 UTC] [B1004]: Starting the cluster_discovery service using tcp [ 0, 100 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:58:48 UTC] [B1013]: Auto Creation of Queues is enabled
+[26/Jan/2016:14:58:48 UTC] [B1151]: Loading destination mq.sys.dmq [Queue] with 0 messages
+[26/Jan/2016:14:58:48 UTC] [B1152]: Loading of destination mq.sys.dmq [Queue] complete
+[26/Jan/2016:14:58:48 UTC] [B1239]: Using platform MBean server
+[26/Jan/2016:14:58:48 UTC] JESMF classes not present - JESMF support will not be enabled.
+[26/Jan/2016:14:58:48 UTC] JMX Connector Server jmxrmi started successfully with url service:jmx:rmi://78c1805eec58/jndi/rmi://78c1805eec58:8686/78c1805eec58/7676/jmxrmi
+[26/Jan/2016:14:58:48 UTC] [B1004]: Starting the admin service using tcp(host = *, port=0, mode=dedicated) with min threads 4 and max threads of 10 
+[26/Jan/2016:14:58:48 UTC] [B1227]: Using file user repository for admin service connection authentication
+[26/Jan/2016:14:58:48 UTC] [B1004]: Starting the jms service using tcp(host = *, port=0, mode=dedicated) with min threads 10 and max threads of 1000 
+[26/Jan/2016:14:58:48 UTC] [B1227]: Using file user repository for jms service connection authentication
+[26/Jan/2016:14:58:48 UTC] [B1004]: Starting the mqdirect2 service using in-process connections with min threads 0 and max threads of 0 
+[26/Jan/2016:14:58:48 UTC] [B1227]: Using file user repository for mqdirect2 service connection authentication
+[26/Jan/2016:14:58:48 UTC] [B1004]: Starting the jmsdirect service using  with min threads 0 and max threads of 0 
+[26/Jan/2016:14:58:48 UTC] [B1227]: Using file user repository for jmsdirect service connection authentication
+[26/Jan/2016:14:58:48 UTC] [B1004]: Starting the cluster service using tcp [ 0.0.0.0/0.0.0.0:32947 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:14:58:48 UTC] [B1228]: Cluster ping interval is 60 seconds
+[26/Jan/2016:14:58:48 UTC] [B1039]: Broker "imqbroker@78c1805eec58:7676" ready.
+[26/Jan/2016:15:04:08 UTC] [B1047]: Shutting down broker...
+[26/Jan/2016:15:04:08 UTC] [B1077]: Broadcast good-bye to all connections ...
+[26/Jan/2016:15:04:08 UTC] [B1078]: Flushing good-bye messages ...
+[26/Jan/2016:15:04:08 UTC] [B1007]: Stopping Service admin with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:15:04:08 UTC] [B1007]: Stopping Service jmsdirect with protocol 
+[26/Jan/2016:15:04:08 UTC] [B1007]: Stopping Service mqdirect2 with protocol none
+[26/Jan/2016:15:04:08 UTC] [B1007]: Stopping Service jms with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:15:04:08 UTC] JMX Connector Server jmxrmi stopped successfully
+[26/Jan/2016:15:04:11 UTC] [B1048]: Shutdown of broker complete.
+[26/Jan/2016:15:06:13 UTC] 
+================================================================================
+Open Message Queue 4.4
+Sun Microsystems, Inc.
+Version:  4.4  (Build 16-a)
+Compile:  Thu Aug 27 07:43:07 PDT 2009
+
+Copyright (c) 2009 Sun Microsystems, Inc.  All rights reserved.  Use is
+subject to license terms.
+================================================================================
+Java Runtime: 1.6.0_45 Sun Microsystems Inc. /usr/java/jdk1.6.0_45/jre
+[26/Jan/2016:15:06:13 UTC]    IMQ_HOME=/opt/glassfish/imq
+[26/Jan/2016:15:06:13 UTC] IMQ_VARHOME=/opt/glassfish/domains/domain1/imq
+[26/Jan/2016:15:06:13 UTC] Linux 4.1.13-boot2docker amd64 78c1805eec58 (1 cpu) root
+[26/Jan/2016:15:06:13 UTC] Java Heap Size: max=506816k, current=31804k
+[26/Jan/2016:15:06:13 UTC] Arguments: -port 7676 -name imqbroker -imqhome /opt/glassfish/imq -varhome /opt/glassfish/domains/domain1/imq -libhome /opt/glassfish/imq/lib -useRmiRegistry -rmiRegistryPort 8686 -save -silent
+[26/Jan/2016:15:06:13 UTC] Embedded Broker 
+[26/Jan/2016:15:06:13 UTC] [B1004]: Starting the portmapper service using tcp [ 7676, 50, * ] with min threads 1 and max threads of 1 
+[26/Jan/2016:15:06:13 UTC] [B1060]: Loading persistent data...
+[26/Jan/2016:15:06:13 UTC] Using built-in file-based persistent store: /opt/glassfish/domains/domain1/imq/instances/imqbroker/
+[26/Jan/2016:15:06:13 UTC] [B1041]: Cluster initialization successful.
+[26/Jan/2016:15:06:13 UTC] [B1004]: Starting the cluster_discovery service using tcp [ 0, 100 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:15:06:13 UTC] [B1136]: Processing stored transactions
+[26/Jan/2016:15:06:13 UTC] [B1284]: 0 cluster transactions remain in PREPARED state, 0 in COMMITTED state waiting for remote broker completion
+[26/Jan/2016:15:06:13 UTC] Of 0 remote transactions, 0 in PREPARED state, 0 in COMMITTED state
+[26/Jan/2016:15:06:14 UTC] [B1013]: Auto Creation of Queues is enabled
+[26/Jan/2016:15:06:14 UTC] [B1151]: Loading destination mq.sys.dmq [Queue] with 0 messages
+[26/Jan/2016:15:06:14 UTC] [B1152]: Loading of destination mq.sys.dmq [Queue] complete
+[26/Jan/2016:15:06:14 UTC] [B1239]: Using platform MBean server
+[26/Jan/2016:15:06:14 UTC] JESMF classes not present - JESMF support will not be enabled.
+[26/Jan/2016:15:06:14 UTC] JMX Connector Server jmxrmi started successfully with url service:jmx:rmi://78c1805eec58/jndi/rmi://78c1805eec58:8686/78c1805eec58/7676/jmxrmi
+[26/Jan/2016:15:06:14 UTC] [B1004]: Starting the admin service using tcp(host = *, port=0, mode=dedicated) with min threads 4 and max threads of 10 
+[26/Jan/2016:15:06:14 UTC] [B1227]: Using file user repository for admin service connection authentication
+[26/Jan/2016:15:06:14 UTC] [B1004]: Starting the jms service using tcp(host = *, port=0, mode=dedicated) with min threads 10 and max threads of 1000 
+[26/Jan/2016:15:06:14 UTC] [B1227]: Using file user repository for jms service connection authentication
+[26/Jan/2016:15:06:14 UTC] [B1004]: Starting the mqdirect2 service using in-process connections with min threads 0 and max threads of 0 
+[26/Jan/2016:15:06:14 UTC] [B1227]: Using file user repository for mqdirect2 service connection authentication
+[26/Jan/2016:15:06:14 UTC] [B1004]: Starting the jmsdirect service using  with min threads 0 and max threads of 0 
+[26/Jan/2016:15:06:14 UTC] [B1227]: Using file user repository for jmsdirect service connection authentication
+[26/Jan/2016:15:06:14 UTC] [B1004]: Starting the cluster service using tcp [ 0.0.0.0/0.0.0.0:43445 ] with min threads 1 and max threads of 1 
+[26/Jan/2016:15:06:14 UTC] [B1228]: Cluster ping interval is 60 seconds
+[26/Jan/2016:15:06:14 UTC] [B1039]: Broker "imqbroker@78c1805eec58:7676" ready.
+[26/Jan/2016:15:07:24 UTC] [B1047]: Shutting down broker...
+[26/Jan/2016:15:07:24 UTC] [B1077]: Broadcast good-bye to all connections ...
+[26/Jan/2016:15:07:24 UTC] [B1078]: Flushing good-bye messages ...
+[26/Jan/2016:15:07:24 UTC] [B1007]: Stopping Service admin with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:15:07:24 UTC] [B1007]: Stopping Service jmsdirect with protocol 
+[26/Jan/2016:15:07:24 UTC] [B1007]: Stopping Service mqdirect2 with protocol none
+[26/Jan/2016:15:07:24 UTC] [B1007]: Stopping Service jms with protocol tcp(host = *, port=0, mode=dedicated)
+[26/Jan/2016:15:07:24 UTC] JMX Connector Server jmxrmi stopped successfully
+[26/Jan/2016:15:07:27 UTC] [B1048]: Shutdown of broker complete.

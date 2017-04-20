@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# Copyright 1997-2007 Sun Microsystems, Inc. All rights reserved.
+# Use is subject to license terms.
+#
+
+. "/opt/glassfish/config"/asenv.conf
+
+
+"$AS_INSTALL"/uninstall -javahome "$AS_JAVA" "$@"
