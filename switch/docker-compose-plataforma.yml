@@ -1,0 +1,22 @@
+publicservices:
+    image: imix/publicservices
+    links:
+        - swgiros
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 8080:8080
+        - 9990:9990
+    volumes: 
+        - ~/shared/deployments/publicservices:/opt/wildfly/standalone/deployments
+        - ~/shared/configurations/publicservices:/opt/wildfly/modules/system/layers/base/com/imix/publicservices/settings/main
+        - ~/shared/logs/publicservices:/opt/wildfly/standalone/log
+swgiros:
+    image: imix/swgiros
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50000:50000
+    volumes: 
+        - ~/shared/switches/giros/logs:/var/log/movilred/switch_mysql/
+        - ~/shared/switches/giros/sw-q2-money-transfer-mysql:/opt/movilred/switch_mysql/jar/sw-q2-money-transfer-mysql

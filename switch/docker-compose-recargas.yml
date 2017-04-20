@@ -1,0 +1,28 @@
+swrecargas:
+    image: imix/switch
+    links:
+        - swregistro
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50002:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-topup-perseott-mysql:/var/log/movilred/switch
+        - ~/shared/switches/jars/sw-q2-topup-perseott-mysql:/opt/movilred/switch_mysql/jar/switch
+    environment:
+        - SW_NAME=sw-q2-topup-perseott-mysql
+        - SW_PATH=/opt/movilred/switch_mysql/jar
+        - SW_JAR=sw-q2-topup-perseott-mysql.jar
+swregistro:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 40000:50000
+    volumes: 
+        - ~/shared/reg/logs/reg-co-tat-std-mp-maxdb-mysql:/var/log/movilred/switch
+        - ~/shared/reg/jars/reg-co-tat-std-mp-maxdb-mysql:/opt/movilred/switch_mysql/jar/switch
+    environment:
+        - SW_NAME=reg-co-tat-std-mp-maxdb-mysql
+        - SW_PATH=/opt/movilred/switch_mysql/jar
+        - SW_JAR=reg-co-tat-std-mp-maxdb-mysql.jar

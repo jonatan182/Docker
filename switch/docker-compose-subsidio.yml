@@ -1,0 +1,26 @@
+swsubsidio:
+    image: imix/switch
+    links:
+        - regsubsidio
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50004:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-subsidio-mysql:/var/log/movilred/switch
+        - ~/shared/switches/jars/sw-q2-subsidio-mysql:/opt/movilred/switch_mysql/jar/sw-q2-subsidio-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-subsidio-mysql
+        - SW_JAR=sw-q2-subsidio-mysql.jar
+regsubsidio:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 40005:50000
+    volumes: 
+        - ~/shared/reg/logs/reg-co-tat-billing-subsidio-mysql:/var/log/movilred/reg
+        - ~/shared/reg/jars/reg-co-tat-billing-subsidio-mysql:/opt/movilred/reg/jar/reg-co-tat-billing-subsidio-mysql
+    environment:
+        - SW_PATH=/opt/movilred/reg/jar/reg-co-tat-billing-subsidio-mysql
+        - SW_JAR=reg-co-tat-billing-subsidio-mysql.jar

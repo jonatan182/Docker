@@ -1,0 +1,162 @@
+swgirosexito:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50001:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-money-transfer-exito-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-money-transfer-exito-mysql:/opt/movilred/switch_mysql/jar/sw-q2-money-transfer-exito-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-money-transfer-exito-mysql
+        - SW_JAR=sw-q2-money-transfer-exito-mysql.jar
+swgiros:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50001:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-money-transfer-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-money-transfer-mysql:/opt/movilred/switch_mysql/jar/sw-q2-money-transfer-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-money-transfer-mysql
+        - SW_JAR=sw-q2-money-transfer-mysql.jar
+swrecargas:
+    image: imix/switch
+    links:
+        - regrecargas
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50002:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-topup-perseott-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-topup-perseott-mysql:/opt/movilred/switch_mysql/jar/sw-q2-topup-perseott-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-topup-perseott-mysql
+        - SW_JAR=sw-q2-topup-perseott-mysql.jar
+regrecargas:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 40000:50000
+    volumes: 
+        - ~/shared/reg/logs/reg-co-tat-std-mp-maxdb-mysql:/var/log/movilred/reg
+        - ~/shared/reg/jars/reg-co-tat-std-mp-maxdb-mysql:/opt/movilred/reg/jar/reg-co-tat-std-mp-maxdb-mysql
+    environment:
+        - SW_PATH=/opt/movilred/reg/jar/reg-co-tat-std-mp-maxdb-mysql
+        - SW_JAR=reg-co-tat-std-mp-maxdb-mysql.jar
+swrecaudo:
+    image: imix/switch
+    links:
+        - muxagrario
+        - muxbogota
+        - muxbancamia
+        - regrecaudo
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50003:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-cb-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-cb-mysql:/opt/movilred/switch_mysql/jar/sw-q2-cb-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-cb-mysql
+        - SW_JAR=sw-q2-cb-mysql.jar
+regrecaudo:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 40001:50000
+    volumes: 
+        - ~/shared/reg/logs/reg-co-tat-billing-mysql:/var/log/movilred/reg
+        - ~/shared/reg/jars/reg-co-tat-billing-mysql:/opt/movilred/reg/jar/reg-co-tat-billing-mysql
+    environment:
+        - SW_PATH=/opt/movilred/reg/jar/reg-co-tat-billing-mysql
+        - SW_JAR=reg-co-tat-billing-mysql.jar
+muxagrario:
+    image: imix/switch
+    links:
+        - dummies
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-multiplexorBancoAgrario-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-multiplexorBancoAgrario-mysql:/opt/movilred/switch_mysql/jar/sw-q2-multiplexorBancoAgrario-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-multiplexorBancoAgrario-mysql
+        - SW_JAR=sw-q2-multiplexorBancoAgrario-mysql.jar
+muxbogota:
+    image: imix/switch
+    links:
+        - dummies
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-multiplexorBancoBogota-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-multiplexorBancoBogota-mysql:/opt/movilred/switch_mysql/jar/sw-q2-multiplexorBancoBogota-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-multiplexorBancoBogota-mysql
+        - SW_JAR=sw-q2-multiplexorBancoBogota-mysql.jar
+muxbancamia:
+    image: imix/switch
+    links:
+        - dummies
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-multiplexorBancaMia-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-multiplexorBancaMia-mysql:/opt/movilred/switch_mysql/jar/sw-q2-multiplexorBancaMia-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-multiplexorBancaMia-mysql
+        - SW_JAR=sw-q2-multiplexorBancaMia-mysql.jar
+swsubsidio:
+    image: imix/switch
+    links:
+        - regsubsidio
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 50004:50000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-subsidio-mysql:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-subsidio-mysql:/opt/movilred/switch_mysql/jar/sw-q2-subsidio-mysql
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-subsidio-mysql
+        - SW_JAR=sw-q2-subsidio-mysql.jar
+regsubsidio:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 40005:50000
+    volumes: 
+        - ~/shared/reg/logs/reg-co-tat-billing-subsidio-mysql:/var/log/movilred/reg
+        - ~/shared/reg/jars/reg-co-tat-billing-subsidio-mysql:/opt/movilred/reg/jar/reg-co-tat-billing-subsidio-mysql
+    environment:
+        - SW_PATH=/opt/movilred/reg/jar/reg-co-tat-billing-subsidio-mysql
+        - SW_JAR=reg-co-tat-billing-subsidio-mysql.jar
+dummies:
+    image: imix/switch
+    external_links:
+        - mysql_mysql_1:mysql
+    ports:
+        - 60011:60011
+        - 60012:60012
+        - 60013:60013
+        - 7000:7000
+    volumes: 
+        - ~/shared/switches/logs/sw-q2-dummies:/var/log/movilred/switch_mysql
+        - ~/shared/switches/jars/sw-q2-dummies:/opt/movilred/switch_mysql/jar/sw-q2-dummies
+    environment:
+        - SW_PATH=/opt/movilred/switch_mysql/jar/sw-q2-dummies
+        - SW_JAR=sw-q2-dummies.jar
